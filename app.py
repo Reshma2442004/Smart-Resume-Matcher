@@ -6,6 +6,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # Load spaCy
 nlp = spacy.load("en_core_web_sm")
+import spacy
+import spacy.cli
+
+# Ensure the model is downloaded
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    spacy.cli.download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 # Page settings
 st.set_page_config(page_title="Smart Resume Matcher", page_icon="📄", layout="wide")
