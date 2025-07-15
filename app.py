@@ -10,7 +10,7 @@ nlp = spacy.load("en_core_web_sm")
 # Page settings
 st.set_page_config(page_title="Smart Resume Matcher", page_icon="📄", layout="wide")
 
-# 🎨 Custom CSS Styling
+#  Custom CSS Styling
 st.markdown("""
     <style>
         body {
